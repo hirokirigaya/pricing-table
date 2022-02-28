@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/*
+
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+:root {
+  --yellow: #ffcc29;
+  --blue: #1d539e;
+  --blue-hover: #7daef1;
+  --gray: #828799;
+  --page-background: #f9fbfc;
+  --text: #1E2338;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.header {
+  display: flex;
+  background-color: var(--blue);
+  color: var(--page-background);
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  text-align: center;
+}
+
+.header .nossos-planos h1 {
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.header .nossos-planos p {
+  font-size: 18px;
+  max-width: 560px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -100px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+
+.produto {
+  background-color: var(--page-background);
+  flex-direction: column;
+  min-height: 550px;
+  width: 355px;
+  height: 100%;
+  margin-left: 2rem;
+  border-radius: 8px;
+}
+.produto .titulo {
+  margin: 40px 25px 46px 25px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.basico-popular {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  background-color: var(--yellow);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.basico-popular p {
+  font-size: 20px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.basico-popular span{
+  font-size: 12px;
+  background-color: var(--blue);
+  color: var(--page-background);
+  width: 94px;
+  height: 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.preco-info {
+  margin: 20px;
+  color: var(--gray);
+}
+
+.preco {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.preco .virgula {
+  font-size: 18px;
+}
+
+.preco .mes {
+  font-size: 18px;
+  color: var(--gray);
+
+}
+
+.lista {
+  margin: 40px;
+}
+
+li {
+  list-style: none;
+  color: var(--gray);
+  margin-bottom:20px;
+  position: relative;
+  margin-left: 15px;
+
+}
+
+li::before {
+  background-image: url(./img/check.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: block;
+  content: "";
+  position: absolute;
+  left: -40px;
+}
+
+.button .btn{ 
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
+  font-size: calc(.8em + 1vh);
+  color: var(--blue);
+  background-color: var(--page-background);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+.button .btn.basico {
+  background-color: var(--blue);
+  color: var(--page-background);
+}
+
+.button .btn:hover {
+  background-color: var(--blue);
+  color: var(--page-background);
+
+}
+
+.button .btn.basico:hover {
+  color: var(--blue);
+  background-color: transparent;
+
+}
+.produt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 500px;
+}
+
+@media(max-width:720px) {
+  form {
+    margin: 0px;
+    margin-top: -100px;
+  }
+  .produto {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .header .nossos-planos h1 {
+    font-size: 35px;
+  }
+  .header .nossos-planos p {
+    font-size: 14px;
+  }
+  .header .nossos-planos {
+    margin: 1rem;
+  }
+}
